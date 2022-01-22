@@ -359,3 +359,65 @@ header {
         position: relative;
     }
 }
+
+
+/* My Services section */
+
+.my-services {
+    background: var(--clr-dark);
+    color: var(--clr-light);
+    text-align: center;
+}
+
+.section__title--services {
+    color: var(--clr-light);
+    position: relative;
+}
+
+.section__title--services::after {
+    content: '';
+    display: block;
+    width: 3em;
+    height: 1px;
+    margin: 0.5em auto 1em;
+    background: var(--clr-dark);
+    opacity: 0.25;
+}
+
+.services {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-gap: 0.5em;
+    margin-bottom: 2em;
+}
+
+.service {
+    max-width: 500px;
+    margin: 0 auto 1em auto;
+}
+
+.icon {
+    font-size: 4em;
+    margin-bottom: 1em;
+}
+
+#github-icon {
+    color: #fff;
+}
+
+#wordpress-icon {
+    color: white;
+}
+
+@media (min-width: 800px) {
+    .services {
+        display: flex;
+        max-width: 1000px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .service+.service {
+        margin-left: 2em;
+    }
+}
